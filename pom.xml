@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.apache.hadoop</groupId>
+	<artifactId>hadoop-connector-fs</artifactId>
+	<version>1.0.0</version>
+	<name>Apache Hadoop connector for FileSystem</name>
+	<description>This module contains code to support integration between Hadoop and a fairly generic distributed FileSystem. Customize this project to integrate your own distributed file system easily.</description>
+	<packaging>pom</packaging>
+	<properties>
+		<file.encoding>UTF-8</file.encoding>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<downloadSources>true</downloadSources>
+	</properties>
+	<modules>
+		<module>java</module>
+		<module>native</module>
+	</modules>
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>native-maven-plugin</artifactId>
+					<version>1.0-alpha-8</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>

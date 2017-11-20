@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.apache.hadoop</groupId>
+		<artifactId>hadoop-connector-fs</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<groupId>org.apache.hadoop</groupId>
+	<artifactId>hadoop-connector-fs-java</artifactId>
+	<version>1.0.0</version>
+	<name>Apache Hadoop connector for FileSystem (Java side)</name>
+	<description>This module generates the Java library that implements the Hadoop APIs to provide a FileSystem alternative. It connects directly to native code through JNI to provide a C abstract API.</description>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.2</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+	    <dependency>
+	      <groupId>org.apache.hadoop</groupId>
+	      <artifactId>hadoop-annotations</artifactId>
+	      <version>2.7.4</version>
+	      <scope>provided</scope>
+	    </dependency>
+	    <dependency>
+	      <groupId>org.apache.hadoop</groupId>
+	      <artifactId>hadoop-common</artifactId>
+	      <version>2.7.4</version>
+	      <scope>provided</scope>
+	    </dependency>
+	  </dependencies>
+</project>
